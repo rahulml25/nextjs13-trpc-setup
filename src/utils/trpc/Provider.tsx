@@ -25,7 +25,7 @@ export const TrpcProvider: React.FC<{ children: React.ReactNode }> = ({
     trpc.createClient({
       links: [
         loggerLink({
-          enabled: () => true,
+          enabled: () => process.env.NODE_ENV !== 'production',
         }),
         httpBatchLink({
           url,

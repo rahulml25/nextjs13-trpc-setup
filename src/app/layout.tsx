@@ -1,6 +1,9 @@
 import './globals.css';
+import roboto from '@/fonts/roboto';
 
+// components
 import { TrpcProvider } from '@/utils/trpc/Provider';
+import Header from '@/components/Header';
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,9 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <TrpcProvider>{children}</TrpcProvider>
-      </body>
+      <TrpcProvider>
+        <body className={roboto.className}>
+          <div className="h-[100dvh] overflow-hidden backdrop-blur">
+            <Header />
+            <>{children}</>
+          </div>
+        </body>
+      </TrpcProvider>
     </html>
   );
 }

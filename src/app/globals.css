@@ -24,4 +24,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+  background-image: radial-gradient(
+    at 10% 0%,
+    rgba(59, 130, 246, 0.25),
+    black,
+    black
+  );
+
+  font-family: Roboto, 'Noto Naskh Arabic UI', Arial, sans-serif;
 }
